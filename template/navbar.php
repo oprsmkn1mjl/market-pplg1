@@ -13,6 +13,7 @@
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
+<<<<<<< HEAD
           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><?= userLogin()['username']; ?><i class="fas fa-user-cog ml-2"></i></a>
           <div class="dropdown-menu dropdown-menu-right">
             <a href="<?= $main_url; ?>auth/change-password.php" class="dropdown-item text-right">Change Password <i class="fas fa-key"></i></a>
@@ -21,6 +22,17 @@
                 class="fas fa-sign-out-alt"></i></a>
           </div>
 
+=======
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown"><?= userLogin()['username']; ?>
+            <i class="fas fa-user-cog ml-2"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a href="<?= $main_url ?>auth/change-password.php" class="dropdown-item text-right">Change Password <i class="fas fa-key"></i></a>
+            <div class="dropdown-divider"></div>
+            <a href="<?= $main_url ?>auth/logout.php" class="dropdown-item text-right">Logout <i
+                class="fas fa-sign-out-alt"></i></a>
+          </div>
+>>>>>>> b8c4b7eb39d89664ee827d037073fdd741590b6b
         </li>
       </ul>
     </nav>

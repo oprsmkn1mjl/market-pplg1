@@ -7,7 +7,11 @@ if (!isset($_SESSION['ssLoginPOS'])) {
 
 require "../config/config.php";
 require "../config/functions.php";
+<<<<<<< HEAD
 require "../module/mode-password.php";
+=======
+require "../models/modelPassword.php";
+>>>>>>> b8c4b7eb39d89664ee827d037073fdd741590b6b
 
 $title = "Change Password - Market PPLG";
 require "../template/header.php";

@@ -1,4 +1,5 @@
 #bg-login {
+<<<<<<< HEAD
     background-image: url('../assets/image/bg-login.jpg');
     background-size: cover;
     background-position: center;
@@ -18,4 +19,25 @@
         opacity: 1;
         transform: translateY(0px);
     }
+=======
+  background-image: url('../assets/image/bg-login.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-down {
+  animation: slide-down 1.5s;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+>>>>>>> b8c4b7eb39d89664ee827d037073fdd741590b6b
 }

@@ -5,6 +5,7 @@ if (!isset($_SESSION['ssLoginPOS'])) {
   exit();
 }
 
+<<<<<<< HEAD
 require '../config/config.php';
 require '../config/functions.php';
 require '../module/mode-user.php';
@@ -21,6 +22,23 @@ if (isset($_POST['simpan'])) {
 }
 ?>
 <!-- Content Wrapper. Contains page content -->
+=======
+require "../config/config.php";
+require "../config/functions.php";
+require "../models/userModel.php";
+
+require "../template/header.php";
+require "../template/navbar.php";
+require "../template/sidebar.php";
+
+if (isset($_POST['simpan'])) {
+  if (insert($_POST) > 0) {
+    echo '<script>alert("User berhasil diregistrasi");</script>';
+  }
+}
+?>
+
+>>>>>>> b8c4b7eb39d89664ee827d037073fdd741590b6b
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <div class="content-header">
@@ -31,33 +49,49 @@ if (isset($_POST['simpan'])) {
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
+<<<<<<< HEAD
             <li class="breadcrumb-item"><a href="<?= $main_url ?>dashboard.php">Home</a></li>
             <li class="breadcrumb-item"><a href="<?= $main_url ?>user/data-user.php">Users</a></li>
+=======
+            <li class="breadcrumb-item"><a href="<?= $main_url; ?>dashboard.php">Home</a></li>
+            <li class="breadcrumb-item"><a href="<?= $main_url; ?>user/data-user.php">Users</a></li>
+>>>>>>> b8c4b7eb39d89664ee827d037073fdd741590b6b
             <li class="breadcrumb-item active">Add User</li>
           </ol>
         </div><!-- /.col -->
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
   </div>
+<<<<<<< HEAD
   <!-- /.content-header -->
 
   <!-- Main content -->
+=======
+>>>>>>> b8c4b7eb39d89664ee827d037073fdd741590b6b
   <section class="content">
     <div class="container-fluid">
       <div class="card">
         <form action="" method="post" enctype="multipart/form-data">
           <div class="card-header">
             <h3 class="card-title"><i class="fas fa-plus fa-sm"></i> Add User</h3>
+<<<<<<< HEAD
             <button type="submit" name="simpan" class="btn btn-primary btn-sm float-right"><i class="fas fa-save"></i>
               Simpan</button>
             <button type="reset" class="btn btn-danger btn-sm float-right mr-1"><i class="fas fa-times"></i>
               Reset</button>
+=======
+            <div class="card-tools">
+              <button type="reset" class="btn btn-danger btn-sm"><i class="fas fa-times fa-sm"></i> Reset</button>
+              <button type="submit" name="simpan" class="btn btn-primary btn-sm"><i class="fas fa-save fa-sm"></i> Simpan</button>
+            </div>
+>>>>>>> b8c4b7eb39d89664ee827d037073fdd741590b6b
           </div>
           <div class="card-body">
             <div class="row">
               <div class="col-lg-8 mb-3">
                 <div class="form-group">
                   <label for="username">Username</label>
+<<<<<<< HEAD
                   <input type="text" name="username" id="username" class="form-control" placeholder="Masukan Username"
                     autofocus autocomplete="off" required>
                 </div>
@@ -79,6 +113,25 @@ if (isset($_POST['simpan'])) {
                 <div class="form-group">
                   <label for="level">Level</label>
                   <select name="level" id="level" class="form-control" required>
+=======
+                  <input type="text" name="username" class="form-control" placeholder="Masukan Username" required>
+                </div>
+                <div class="form-group">
+                  <label for="fullname">Fullname</label>
+                  <input type="text" name="fullname" class="form-control" placeholder="Masukan Nama Lengkap" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" class="form-control" placeholder="Masukan Password" required>
+                </div>
+                <div class="form-group">
+                  <label for="password2">Konfirmasi Password</label>
+                  <input type="password" name="password2" class="form-control" placeholder="Masukan Kembali Password" required>
+                </div>
+                <div class="form-group">
+                  <label for="level">Level</label>
+                  <select name="level" class="form-control" required>
+>>>>>>> b8c4b7eb39d89664ee827d037073fdd741590b6b
                     <option value="">-- Level --</option>
                     <option value="1">Administrator</option>
                     <option value="2">Manager</option>
@@ -87,6 +140,7 @@ if (isset($_POST['simpan'])) {
                 </div>
                 <div class="form-group">
                   <label for="address">Address</label>
+<<<<<<< HEAD
                   <textarea name="address" id="address" cols="" rows="3" placeholder="Masukan Alamat"
                     class="form-control" required></textarea>
                 </div>
@@ -96,6 +150,15 @@ if (isset($_POST['simpan'])) {
                 <input type="file" name="image" class="form-control">
                 <span class="text-sm">Type file gambar JPG | PNG | GIF</span><br>
                 <span class="text-sm">Width = Height</span>
+=======
+                  <textarea name="address" cols="" rows="3" placeholder="Masukan Alamat Anda" class="form-control" required></textarea>
+                </div>
+              </div>
+              <div class="col-lg-4 text-center">
+                <img src="<?= $main_url; ?>assets/image/default.jpg" class="profile-user-img img-circle mb-3" alt="">
+                <input type="file" name="image" class="form-control">
+                <span class="text-sm">Type File Gambar JPG|PNG|GIF</span>
+>>>>>>> b8c4b7eb39d89664ee827d037073fdd741590b6b
               </div>
             </div>
           </div>
@@ -104,4 +167,11 @@ if (isset($_POST['simpan'])) {
     </div>
   </section>
 </div>
+<<<<<<< HEAD
 <?php require '../template/footer.php'; ?>
+=======
+
+<?php
+require "../template/footer.php";
+?>
+>>>>>>> b8c4b7eb39d89664ee827d037073fdd741590b6b
